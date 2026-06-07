@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Recommendation System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Crop Recommendation System</h1>
+            <p class="subtitle">
+                Enter soil and environmental parameters to get the best crop recommendations.
+            </p>
+
+            <form id="cropForm">
+
+                <div class="grid">
+
+                    <div class="input-group">
+                        <label>Nitrogen (N)</label>
+                        <input type="number" id="N" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phosphorus (P)</label>
+                        <input type="number" id="P" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Potassium (K)</label>
+                        <input type="number" id="K" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Temperature (°C)</label>
+                        <input type="number" step="0.01" id="temperature" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Humidity (%)</label>
+                        <input type="number" step="0.01" id="humidity" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>pH Value</label>
+                        <input type="number" step="0.01" id="ph" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Rainfall (cm)</label>
+                        <input type="number" step="0.01" id="rainfall" required>
+                    </div>
+
+                </div>
+
+                <button type="submit">
+                    Predict Crop
+                </button>
+
+            </form>
+
+            <div id="result" class="result hidden">
+
+                <div class="result-card">
+                    <h3>Primary Recommendation</h3>
+                    <h2 id="bestCrop">-</h2>
+                    <p id="bestProb">-</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Secondary Recommendation</h3>
+                    <h2 id="secondCrop">-</h2>
+                    <p id="secondProb">-</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
